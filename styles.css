@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 100px;
+}
+
+.highlight-moving-text {
+    font-size: 36px;
+    display: inline-block;
+}
+
+.highlight {
+    background-color: #ffcc00;
+    padding: 5px 10px;
+    border-radius: 5px;
+    animation: highlightText 2s infinite alternate;
+}
+
+@keyframes highlightText {
+    0% {
+        background-color: #ffcc00;
+        color: #000;
+    }
+    100% {
+        background-color: #ff0000;
+        color: #fff;
+    }
+}
+
+.moving-object {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    position: absolute;
+    animation: moveObject 4s linear infinite;
+}
+
+@keyframes moveObject {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 50px);
+    }
+}
